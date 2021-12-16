@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFA26266-FE93-4FAB-86DB-A1ED096B061C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reqspec", "src\reqspec\reqspec.csproj", "{19BFE220-FD64-4F29-907E-93A39CE8047C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19BFE220-FD64-4F29-907E-93A39CE8047C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19BFE220-FD64-4F29-907E-93A39CE8047C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19BFE220-FD64-4F29-907E-93A39CE8047C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19BFE220-FD64-4F29-907E-93A39CE8047C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19BFE220-FD64-4F29-907E-93A39CE8047C} = {CFA26266-FE93-4FAB-86DB-A1ED096B061C}
+	EndGlobalSection
+EndGlobal
