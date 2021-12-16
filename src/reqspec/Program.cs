@@ -1,4 +1,4 @@
-﻿using parsereqspec;
+﻿using reqspec;
 
 var reqspec = new ReqSpec();
 

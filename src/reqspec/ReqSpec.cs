@@ -4,7 +4,7 @@ using System;
 using AngleSharp.Dom;
 using AngleSharp.Html.Parser;
 
-namespace parsereqspec;
+namespace reqspec;
 public class ReqSpec
 {
 
@@ -71,7 +71,13 @@ public class ReqSpec
         }
         return this;
     }
-
+    public string Result
+    {
+        get
+        {
+            return _document.DocumentElement.OuterHtml;
+        }
+    }
     public void WriteResult(string filename)
     {
         if (_document != null)
