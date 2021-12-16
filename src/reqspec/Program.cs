@@ -1,56 +1,13 @@
-﻿using Markdig;
-using System.IO;
-using System;
-using AngleSharp.Dom;
-using AngleSharp.Html.Parser;
+﻿using parsereqspec;
 
+var reqspec = new ReqSpec();
 
-MarkdownPipeline pipline;
-string html;
-string markdown;
+reqspec.Parse("Readme.md");
 
-markdown = File.ReadAllText("Readme.md");
+reqspec.WriteResult(@"result.html");
 
-pipline = new MarkdownPipelineBuilder()
-  .Build();
-
-html = Markdown.ToHtml(markdown, pipline);
-
-pipline = new MarkdownPipelineBuilder()
-  .UseAdvancedExtensions()
-  .UseAutoIdentifiers()
-  .Build();
-
-html = Markdown.ToHtml(markdown, pipline);
-
-var parser = new HtmlParser();
-var document = parser.ParseDocument(html);
-
-List<Tuple<string, string>> requirements = new List<Tuple<string, string>>();
-
-foreach (IElement element in document.QuerySelectorAll("*").Where(item => item.ClassList.Contains("requirement")))
+foreach (var item in reqspec.Requirements)
 {
-    requirements.Add(new Tuple<string, string>(element.Id, element.TextContent));
-    Console.WriteLine($"'{element.TextContent}' id:'{element.Id}'");
-    var small = document.CreateElement("small");
-    small.TextContent = $"({element.Id})";
-    element.InsertAfter(small);
+    Console.WriteLine($"{item.Item1} - {item.Item2}");
 }
-
-foreach (IElement element in document.QuerySelectorAll("*").Where(item => item.TextContent.Equals("Table of Requirements")))
-{
-    var ul = document.CreateElement("ul");
-    foreach (var item in requirements)
-    {
-        var li = document.CreateElement("li");
-        var a = document.CreateElement("a");
-        a.SetAttribute("href", $"#{item.Item1}");
-        a.TextContent = $"{item.Item1} - {item.Item2}";
-        li.AppendChild(a);
-        ul.AppendChild(li);
-    }
-    element.InsertAfter(ul);
-}
-
 //https://github.com/AngleSharp/AngleSharp/blob/devel/docs/tutorials/03-Examples.md
-File.WriteAllText(@"result.html", document.DocumentElement.OuterHtml);

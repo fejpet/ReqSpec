@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFA26266-FE9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reqspec", "src\reqspec\reqspec.csproj", "{19BFE220-FD64-4F29-907E-93A39CE8047C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{FB445FE6-13BA-4589-BF09-BB880A4ABB53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reqspec_utest", "tst\reqspec_utest\reqspec_utest.csproj", "{BB77AD6D-911F-4E7B-BBEE-A54583FF2165}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +24,13 @@ Global
 		{19BFE220-FD64-4F29-907E-93A39CE8047C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19BFE220-FD64-4F29-907E-93A39CE8047C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19BFE220-FD64-4F29-907E-93A39CE8047C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB77AD6D-911F-4E7B-BBEE-A54583FF2165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB77AD6D-911F-4E7B-BBEE-A54583FF2165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB77AD6D-911F-4E7B-BBEE-A54583FF2165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB77AD6D-911F-4E7B-BBEE-A54583FF2165}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{19BFE220-FD64-4F29-907E-93A39CE8047C} = {CFA26266-FE93-4FAB-86DB-A1ED096B061C}
+		{BB77AD6D-911F-4E7B-BBEE-A54583FF2165} = {FB445FE6-13BA-4589-BF09-BB880A4ABB53}
 	EndGlobalSection
 EndGlobal

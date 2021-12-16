@@ -11,7 +11,6 @@
     <Content Include="../../Readme.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
-
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.16.1" />
     <PackageReference Include="Markdig" Version="0.26.0" />
